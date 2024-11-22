@@ -1,0 +1,251 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .no-spinner::-webkit-outer-spin-button,
+  .no-spinner::-webkit-inner-spin-button {
+    @apply appearance-none;
+    margin: 0;
+  }
+
+  .no-spinner {
+    @apply appearance-none;
+  }
+}
+
+/* Define custom font variables */
+// :root {
+//   --font-source-sans-pro: var(--font-source-sans-pro);
+//   --font-source-sans-pro-bold: var(--font-source-sans-pro-bold);
+//   --font-source-sans-pro-semi-bold: var(--font-source-sans-pro-semi-bold);
+//   --font-source-sans-pro-light: var(--font-source-sans-pro-light);
+//   --font-source-sans-pro-extra-light: var(--font-source-sans-pro-extra-light);
+//   --font-source-sans-pro-italic: var(--font-source-sans-pro-italic);
+//   --font-source-sans-pro-extra-light-italic: var(--font-source-sans-pro-extra-light-italic);
+//   --font-source-sans-pro-light-italic: var(--font-source-sans-pro-light-italic);
+//   --font-source-sans-pro-semi-bold-italic: var(--font-source-sans-pro-semi-bold-italic);
+//   --font-source-sans-pro-bold-italic: var(--font-source-sans-pro-bold-italic);
+//   --font-source-sans-pro-black: var(--font-source-sans-pro-black);
+//   --font-source-sans-pro-black-italic: var(--font-source-sans-pro-black-italic);
+// }
+
+// // /* Apply the regular font style to the entire document */
+// body {
+//   font-family: var(--font-source-sans-pro), sans-serif;
+// }
+
+// /* Example classes for different font styles */
+// .font-bold {
+//   font-family: var(--font-source-sans-pro-bold), sans-serif;
+// }
+
+// .font-italic {
+//   font-family: var(--font-source-sans-pro-italic), sans-serif;
+// }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  inline-size: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fcf9f2;
+  margin-block: 0.3rem;
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #017a3a;
+  border-radius: 1rem;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.max-Width {
+  max-inline-size: 1300px;
+  inline-size: 100%;
+  margin: 0 auto;
+  padding: 0;
+
+  @media screen and (max-width: 768px) {
+    max-inline-size: 100%;
+    padding: 0 1.2rem;
+  }
+}
+
+.footer {
+  h2 {
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2rem;
+    /* 114.286% */
+    letter-spacing: 0.0175rem;
+  }
+
+  ul {
+    li {
+      a {
+        font-size: 0.92rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5rem;
+      }
+    }
+  }
+
+  p {
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+  }
+}
+
+.nearby-pagination {
+  .swiper-pagination-bullet {
+    background-color: #017a3a;
+    block-size: 0.7rem;
+    inline-size: 0.7rem;
+    aspect-ratio: 1 / 1;
+    opacity: 0.2;
+    border-radius: 50%;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #017a3a;
+    // block-size: 1rem;
+    // aspect-ratio: 1 / 1;
+    opacity: 1;
+    border-radius: 0.5rem;
+  }
+}
+
+.gallerySwiper,
+.chooseUs {
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #017a3a;
+    block-size: 2.5rem;
+    inline-size: 2.5rem;
+    background-color: #fcf9f2;
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: 1px solid #017a3a;
+    &::after {
+      color: #017a3a;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .swiper-button-disabled {
+    display: none;
+  }
+}
+
+.resort-highlights .swiper-slide:not(.swiper-slide-active) {
+  filter: blur(5px);
+  transition: all;
+  transition-duration: 1000ms;
+
+  h3 {
+    opacity: 0;
+  }
+}
+
+.policy_pages_dates {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+    padding: 0 0 0 1rem;
+    list-style: disc;
+    color: #54647b;
+  }
+  ol {
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+    padding: 0 0 0 1rem;
+    list-style: decimal;
+    color: #54647b;
+  }
+  h2 {
+    color: #063333;
+    font-family: "Playfair Display";
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 3rem;
+    letter-spacing: 0.125rem;
+    @media screen and (max-width: 768px) {
+      font-size: 1.8rem;
+      line-height: 2rem;
+    }
+  }
+  h3 {
+    color: #063333;
+    font-family: "Playfair Display";
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2rem; /* 114.286% */
+    letter-spacing: 0.0175rem;
+    @media screen and (max-width: 768px) {
+      font-size: 1.4rem;
+      line-height: 1.5rem;
+    }
+  }
+  p {
+    color: #54647b;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; /* 150% */
+  }
+  li {
+    color: #54647b;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; /* 150% */
+  }
+}
